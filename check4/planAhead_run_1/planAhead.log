@@ -1,0 +1,148 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4
+# Build 157570 by hdbuild on Fri Dec 16 12:55:36 MST 2011
+# Start of session at: Tue Oct 24 10:43:58 2017
+# Process ID: 896
+# Log file: D:/lab6/check4/planAhead_run_1/planAhead.log
+# Journal file: D:/lab6/check4/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common-78] Attempting to get a license: PlanAhead
+INFO: [Common-82] Got a license: PlanAhead
+INFO: [Device-25] Loading parts and site information from C:/Xilinx/13.4/ISE_DS/PlanAhead\parts\arch.xmlParsing RTL primitives file [C:/Xilinx/13.4/ISE_DS/PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/13.4/ISE_DS/PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml]
+start_gui
+source D:/lab6/check4/pa.fromNetlist.tcl
+# create_project -name check4 -dir "D:/lab6/check4/planAhead_run_1" -part xc3s200tq144-4
+Parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\verilog.xml].
+Finished parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\verilog.xml].
+Parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\vhdl.xml].
+Finished parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\vhdl.xml].
+Parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\ucf.xml].
+Finished parsing template File [C:/Xilinx/13.4/ISE_DS/ISE\data\projnav\templates\ucf.xml].
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/lab6/check4/alarm_twodigit.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/lab6/check4} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "alarm_twodigit.ucf" [current_fileset -constrset]
+Adding file 'D:\lab6\check4\alarm_twodigit.ucf' to fileset 'constrs_1'
+# add_files [list {alarm_twodigit.ucf}] -fileset [get_property constrset [current_run]]
+# open_netlist_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to part: xc3s200tq144-4
+Release 13.4 - ngc2edif O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.4 - ngc2edif O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design alarm_twodigit.ngc ...
+WARNING:NetListWriters:298 - No output is written to alarm_twodigit.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file alarm_twodigit.edif ...
+ngc2edif: Total memory usage is 61112 kilobytes
+
+Parsing EDIF File [.\planAhead_run_1\check4.data\cache\alarm_twodigit_ngc_d6c41753.edif]
+Finished Parsing EDIF File [.\planAhead_run_1\check4.data\cache\alarm_twodigit_ngc_d6c41753.edif]
+INFO: [PlanAhead-430] Reading macro library C:/Xilinx/13.4/ISE_DS/PlanAhead\./parts/xilinx/spartan3/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/13.4/ISE_DS/PlanAhead\./parts/xilinx/spartan3/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/13.4/ISE_DS/PlanAhead\./parts/xilinx/spartan3/hd_int_macros.edn]
+Loading clock regions from C:/Xilinx/13.4/ISE_DS/PlanAhead\parts/xilinx/spartan3/spartan3/xc3s200/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/13.4/ISE_DS/PlanAhead\parts/xilinx/spartan3/spartan3/xc3s200/ClockBuffers.xml
+Loading package from C:/Xilinx/13.4/ISE_DS/PlanAhead\parts/xilinx/spartan3/spartan3/xc3s200/tq144/Package.xml
+Loading io standards from C:/Xilinx/13.4/ISE_DS/PlanAhead\./parts/xilinx/spartan3/IOStandards.xml
+INFO: [Device-19] Loading pkg sso from C:/Xilinx/13.4/ISE_DS/PlanAhead\parts/xilinx/spartan3/spartan3/xc3s200/tq144/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/13.4/ISE_DS/PlanAhead\./parts/xilinx/spartan3/drc.xml
+INFO: [Timing-77] Reading timing library C:/Xilinx/13.4/ISE_DS/PlanAhead\parts/xilinx/spartan3/spartan3/spartan3-4.lib.
+INFO: [Timing-34] Done reading timing library C:/Xilinx/13.4/ISE_DS/PlanAhead\parts/xilinx/spartan3/spartan3/spartan3-4.lib.
+Parsing UCF File [D:\lab6\check4\alarm_twodigit.ucf]
+Finished Parsing UCF File [D:\lab6\check4\alarm_twodigit.ucf]
+INFO: [PlanAhead-566] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (HD_IBUFG, HD_BUFG): 1 instances
+open_netlist_design: Time (s): 5.708w.  Memory (MB): 406.160p 53.016g
+startgroup
+startgroup
+set_property loc PAD25 [get_ports clk]
+set_property loc PAD25 [get_ports clk]
+endgroup
+endgroup
+startgroup
+startgroup
+set_property loc PAD164 [get_ports en]
+set_property loc PAD164 [get_ports en]
+endgroup
+endgroup
+startgroup
+startgroup
+set_property loc PAD126 [get_ports sp]
+set_property loc PAD126 [get_ports sp]
+endgroup
+endgroup
+set_property loc "" [get_ports [list  {o[6]}]]
+set_property loc "" [get_ports [list  {o[6]}]]
+startgroup
+startgroup
+set_property loc PAD188 [get_ports {com[0]}]
+set_property loc PAD188 [get_ports {com[0]}]
+endgroup
+endgroup
+startgroup
+startgroup
+set_property loc PAD187 [get_ports {com[1]}]
+set_property loc PAD187 [get_ports {com[1]}]
+endgroup
+endgroup
+startgroup
+startgroup
+set_property loc PAD189 [get_ports {o[0]}]
+set_property loc PAD189 [get_ports {o[0]}]
+endgroup
+endgroup
+startgroup
+startgroup
+set_property loc PAD195 [get_ports {o[1]}]
+set_property loc PAD195 [get_ports {o[1]}]
+endgroup
+endgroup
+startgroup
+startgroup
+set_property loc PAD196 [get_ports {o[2]}]
+set_property loc PAD196 [get_ports {o[2]}]
+endgroup
+endgroup
+startgroup
+set_property IOSTANDARD {} [get_ports [list {o[2]}]]
+endgroup
+startgroup
+startgroup
+set_property loc PAD2 [get_ports {o[3]}]
+set_property loc PAD2 [get_ports {o[3]}]
+endgroup
+endgroup
+startgroup
+startgroup
+set_property loc PAD3 [get_ports {o[4]}]
+set_property loc PAD3 [get_ports {o[4]}]
+endgroup
+endgroup
+startgroup
+startgroup
+set_property loc PAD12 [get_ports {o[5]}]
+set_property loc PAD12 [get_ports {o[5]}]
+endgroup
+endgroup
+startgroup
+startgroup
+set_property loc PAD13 [get_ports {o[6]}]
+set_property loc PAD13 [get_ports {o[6]}]
+endgroup
+endgroup
+save_design
+exit
+stop_gui
+INFO: [PlanAhead-261] Exiting PlanAhead...
+INFO: [Common-83] Releasing license: PlanAhead

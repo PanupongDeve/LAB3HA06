@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4
+# Build 157570 by hdbuild on Fri Dec 16 12:55:36 MST 2011
+# Start of session at: Tue Oct 24 09:30:14 2017
+# Process ID: 1368
+# Log file: D:/lab6/buzzer/planAhead_run_1/planAhead.log
+# Journal file: D:/lab6/buzzer/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/lab6/buzzer/pa.fromHdl.tcl
+exit
+stop_gui

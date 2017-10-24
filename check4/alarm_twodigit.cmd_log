@@ -1,0 +1,59 @@
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-tq144-4 alarm_twodigit.ngc alarm_twodigit.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o alarm_twodigit_map.ncd alarm_twodigit.ngd alarm_twodigit.pcf 
+par -w -intstyle ise -ol high -t 1 alarm_twodigit_map.ncd alarm_twodigit.ncd alarm_twodigit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml alarm_twodigit.twx alarm_twodigit.ncd -o alarm_twodigit.twr alarm_twodigit.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc alarm_twodigit.ucf -p xc3s200-tq144-4 alarm_twodigit.ngc alarm_twodigit.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o alarm_twodigit_map.ncd alarm_twodigit.ngd alarm_twodigit.pcf 
+par -w -intstyle ise -ol high -t 1 alarm_twodigit_map.ncd alarm_twodigit.ncd alarm_twodigit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml alarm_twodigit.twx alarm_twodigit.ncd -o alarm_twodigit.twr alarm_twodigit.pcf -ucf alarm_twodigit.ucf 
+bitgen -intstyle ise -f alarm_twodigit.ut alarm_twodigit.ncd 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc alarm_twodigit.ucf -p xc3s200-tq144-4 alarm_twodigit.ngc alarm_twodigit.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o alarm_twodigit_map.ncd alarm_twodigit.ngd alarm_twodigit.pcf 
+par -w -intstyle ise -ol high -t 1 alarm_twodigit_map.ncd alarm_twodigit.ncd alarm_twodigit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml alarm_twodigit.twx alarm_twodigit.ncd -o alarm_twodigit.twr alarm_twodigit.pcf -ucf alarm_twodigit.ucf 
+bitgen -intstyle ise -f alarm_twodigit.ut alarm_twodigit.ncd 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc alarm_twodigit.ucf -p xc3s200-tq144-4 alarm_twodigit.ngc alarm_twodigit.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o alarm_twodigit_map.ncd alarm_twodigit.ngd alarm_twodigit.pcf 
+par -w -intstyle ise -ol high -t 1 alarm_twodigit_map.ncd alarm_twodigit.ncd alarm_twodigit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml alarm_twodigit.twx alarm_twodigit.ncd -o alarm_twodigit.twr alarm_twodigit.pcf -ucf alarm_twodigit.ucf 
+bitgen -intstyle ise -f alarm_twodigit.ut alarm_twodigit.ncd 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc alarm_twodigit.ucf -p xc3s200-tq144-4 alarm_twodigit.ngc alarm_twodigit.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o alarm_twodigit_map.ncd alarm_twodigit.ngd alarm_twodigit.pcf 
+par -w -intstyle ise -ol high -t 1 alarm_twodigit_map.ncd alarm_twodigit.ncd alarm_twodigit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml alarm_twodigit.twx alarm_twodigit.ncd -o alarm_twodigit.twr alarm_twodigit.pcf -ucf alarm_twodigit.ucf 
+bitgen -intstyle ise -f alarm_twodigit.ut alarm_twodigit.ncd 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc alarm_twodigit.ucf -p xc3s200-tq144-4 alarm_twodigit.ngc alarm_twodigit.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o alarm_twodigit_map.ncd alarm_twodigit.ngd alarm_twodigit.pcf 
+par -w -intstyle ise -ol high -t 1 alarm_twodigit_map.ncd alarm_twodigit.ncd alarm_twodigit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml alarm_twodigit.twx alarm_twodigit.ncd -o alarm_twodigit.twr alarm_twodigit.pcf -ucf alarm_twodigit.ucf 
+bitgen -intstyle ise -f alarm_twodigit.ut alarm_twodigit.ncd 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc alarm_twodigit.ucf -p xc3s200-tq144-4 alarm_twodigit.ngc alarm_twodigit.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o alarm_twodigit_map.ncd alarm_twodigit.ngd alarm_twodigit.pcf 
+par -w -intstyle ise -ol high -t 1 alarm_twodigit_map.ncd alarm_twodigit.ncd alarm_twodigit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml alarm_twodigit.twx alarm_twodigit.ncd -o alarm_twodigit.twr alarm_twodigit.pcf -ucf alarm_twodigit.ucf 
+bitgen -intstyle ise -f alarm_twodigit.ut alarm_twodigit.ncd 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc alarm_twodigit.ucf -p xc3s200-tq144-4 alarm_twodigit.ngc alarm_twodigit.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o alarm_twodigit_map.ncd alarm_twodigit.ngd alarm_twodigit.pcf 
+par -w -intstyle ise -ol high -t 1 alarm_twodigit_map.ncd alarm_twodigit.ncd alarm_twodigit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml alarm_twodigit.twx alarm_twodigit.ncd -o alarm_twodigit.twr alarm_twodigit.pcf -ucf alarm_twodigit.ucf 
+bitgen -intstyle ise -f alarm_twodigit.ut alarm_twodigit.ncd 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+xst -intstyle ise -ifn "D:/lab6/check4/alarm_twodigit.xst" -ofn "D:/lab6/check4/alarm_twodigit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc alarm_twodigit.ucf -p xc3s200-tq144-4 alarm_twodigit.ngc alarm_twodigit.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o alarm_twodigit_map.ncd alarm_twodigit.ngd alarm_twodigit.pcf 
+par -w -intstyle ise -ol high -t 1 alarm_twodigit_map.ncd alarm_twodigit.ncd alarm_twodigit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml alarm_twodigit.twx alarm_twodigit.ncd -o alarm_twodigit.twr alarm_twodigit.pcf -ucf alarm_twodigit.ucf 
+bitgen -intstyle ise -f alarm_twodigit.ut alarm_twodigit.ncd 

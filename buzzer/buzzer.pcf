@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map O.87xd on Tue Oct 24 09:30:34 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P127" LEVEL 1;
+COMP "sp" LOCATE = SITE "P52" LEVEL 1;
+COMP "onoff" LOCATE = SITE "P25" LEVEL 1;
+SCHEMATIC END;
+

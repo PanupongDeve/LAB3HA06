@@ -1,0 +1,487 @@
+Release 13.4 - xst O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: alarm_twodigit.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "alarm_twodigit.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "alarm_twodigit"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-tq144
+
+---- Source Options
+Top Module Name                    : alarm_twodigit
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "alarm_twodigit.v" in library work
+Module <alarm_twodigit> compiled
+No errors in compilation
+Analysis of file <"alarm_twodigit.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <alarm_twodigit> in library <work> with parameters.
+	s0 = "00000000000000000000000000000000"
+	s1 = "00000000000000000000000000000001"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <alarm_twodigit>.
+	s0 = 32'sb00000000000000000000000000000000
+	s1 = 32'sb00000000000000000000000000000001
+WARNING:Xst:905 - "alarm_twodigit.v" line 58: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <en>, <ten>
+Module <alarm_twodigit> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <alarm_twodigit>.
+    Related source file is "alarm_twodigit.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <sp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16x7-bit ROM for signal <ss1>.
+    Found 16x7-bit ROM for signal <ss2>.
+    Found 32-bit up counter for signal <cnt>.
+    Found 4-bit up counter for signal <one>.
+    Found 1-bit register for signal <sclk>.
+    Found 32-bit up counter for signal <scnt>.
+    Found 2-bit register for signal <scom>.
+    Found 7-bit register for signal <so>.
+    Found 1-bit register for signal <ssclk>.
+    Found 1-bit register for signal <state>.
+    Found 4-bit up counter for signal <ten>.
+    Summary:
+	inferred   2 ROM(s).
+	inferred   4 Counter(s).
+	inferred  12 D-type flip-flop(s).
+Unit <alarm_twodigit> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 2
+# Counters                                             : 4
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 5
+ 1-bit register                                        : 3
+ 2-bit register                                        : 1
+ 7-bit register                                        : 1
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 2
+# Counters                                             : 4
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <state> in Unit <alarm_twodigit> is equivalent to the following FF/Latch, which will be removed : <scom_0> 
+
+Optimizing unit <alarm_twodigit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block alarm_twodigit, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 83
+ Flip-Flops                                            : 83
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : alarm_twodigit.ngr
+Top Level Output File Name         : alarm_twodigit
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 12
+
+Cell Usage :
+# BELS                             : 272
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 62
+#      LUT2                        : 5
+#      LUT2_D                      : 1
+#      LUT3                        : 14
+#      LUT3_D                      : 1
+#      LUT4                        : 30
+#      LUT4_L                      : 1
+#      MUXCY                       : 78
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 84
+#      FD                          : 2
+#      FDE                         : 1
+#      FDR                         : 70
+#      FDRE                        : 4
+#      FDS                         : 6
+#      LDCE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 1
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200tq144-4 
+
+ Number of Slices:                       62  out of   1920     3%  
+ Number of Slice Flip Flops:             83  out of   3840     2%  
+ Number of 4 input LUTs:                121  out of   3840     3%  
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of     97    12%  
+    IOB Flip Flops:                       1
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 66    |
+ssclk                              | NONE(so_4)             | 9     |
+ten_cmp_eq0000(ten_or000021:O)     | NONE(*)(sp)            | 1     |
+sclk                               | NONE(one_0)            | 8     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+sp_0_not0000(sp_0_not00001_INV_0:O)| NONE(sp)               | 1     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.889ns (Maximum Frequency: 126.762MHz)
+   Minimum input arrival time before clock: 4.561ns
+   Maximum output required time after clock: 7.552ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.889ns (frequency: 126.762MHz)
+  Total number of paths / destination ports: 3169 / 131
+-------------------------------------------------------------------------
+Delay:               7.889ns (Levels of Logic = 10)
+  Source:            scnt_8 (FF)
+  Destination:       ssclk (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: scnt_8 to ssclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.720   1.216  scnt_8 (scnt_8)
+     LUT4:I0->O            1   0.551   0.000  scnt_cmp_eq0000_wg_lut<0> (scnt_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  scnt_cmp_eq0000_wg_cy<0> (scnt_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  scnt_cmp_eq0000_wg_cy<1> (scnt_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  scnt_cmp_eq0000_wg_cy<2> (scnt_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  scnt_cmp_eq0000_wg_cy<3> (scnt_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  scnt_cmp_eq0000_wg_cy<4> (scnt_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  scnt_cmp_eq0000_wg_cy<5> (scnt_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  scnt_cmp_eq0000_wg_cy<6> (scnt_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          33   0.281   1.859  scnt_cmp_eq0000_wg_cy<7> (scnt_cmp_eq0000)
+     INV:I->O              1   0.551   0.801  ssclk_not00011_INV_0 (ssclk_not0001)
+     FDR:R                     1.026          ssclk
+    ----------------------------------------
+    Total                      7.889ns (4.013ns logic, 3.876ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ssclk'
+  Clock period: 7.270ns (frequency: 137.552MHz)
+  Total number of paths / destination ports: 21 / 15
+-------------------------------------------------------------------------
+Delay:               7.270ns (Levels of Logic = 3)
+  Source:            state (FF)
+  Destination:       so_3 (FF)
+  Source Clock:      ssclk rising
+  Destination Clock: ssclk rising
+
+  Data Path: state to so_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             15   0.720   1.256  state (state)
+     LUT3_D:I2->O          1   0.551   0.869  so_mux0000<0>210 (N5)
+     LUT4:I2->O            1   0.551   0.869  so_mux0000<4>35 (so_mux0000<4>35)
+     LUT3:I2->O            2   0.551   0.877  so_mux0000<4>36 (so_mux0000<4>)
+     FDS:S                     1.026          so_3
+    ----------------------------------------
+    Total                      7.270ns (3.399ns logic, 3.871ns route)
+                                       (46.8% logic, 53.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sclk'
+  Clock period: 6.483ns (frequency: 154.250MHz)
+  Total number of paths / destination ports: 84 / 20
+-------------------------------------------------------------------------
+Delay:               6.483ns (Levels of Logic = 2)
+  Source:            one_0 (FF)
+  Destination:       one_0 (FF)
+  Source Clock:      sclk rising
+  Destination Clock: sclk rising
+
+  Data Path: one_0 to one_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.720   1.457  one_0 (one_0)
+     LUT4:I0->O            7   0.551   1.261  ten_or000021 (ten_cmp_eq0000)
+     LUT2:I1->O            4   0.551   0.917  one_or00001 (one_or0000)
+     FDR:R                     1.026          one_0
+    ----------------------------------------
+    Total                      6.483ns (2.848ns logic, 3.635ns route)
+                                       (43.9% logic, 56.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sclk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.561ns (Levels of Logic = 2)
+  Source:            en (PAD)
+  Destination:       one_0 (FF)
+  Destination Clock: sclk rising
+
+  Data Path: en to one_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.821   1.246  en_IBUF (en_IBUF)
+     LUT2:I0->O            4   0.551   0.917  one_or00001 (one_or0000)
+     FDR:R                     1.026          one_0
+    ----------------------------------------
+    Total                      4.561ns (2.398ns logic, 2.163ns route)
+                                       (52.6% logic, 47.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ten_cmp_eq0000'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.078ns (Levels of Logic = 1)
+  Source:            sp (LATCH)
+  Destination:       sp (PAD)
+  Source Clock:      ten_cmp_eq0000 falling
+
+  Data Path: sp to sp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.633   0.801  sp (sp_OBUF)
+     OBUF:I->O                 5.644          sp_OBUF (sp)
+    ----------------------------------------
+    Total                      7.078ns (6.277ns logic, 0.801ns route)
+                                       (88.7% logic, 11.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ssclk'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              7.552ns (Levels of Logic = 1)
+  Source:            state (FF)
+  Destination:       com<0> (PAD)
+  Source Clock:      ssclk rising
+
+  Data Path: state to com<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             15   0.720   1.188  state (state)
+     OBUF:I->O                 5.644          com_0_OBUF (com<0>)
+    ----------------------------------------
+    Total                      7.552ns (6.364ns logic, 1.188ns route)
+                                       (84.3% logic, 15.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.04 secs
+ 
+--> 
+
+Total memory usage is 200812 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

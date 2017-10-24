@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\lab6\check3\buzzer.ncd
+OUTFILE=D:\lab6\check3\buzzer.bit
+FAMILY=Spartan3
+PART=xc3s200-4tq144
+WORKINGDIR=D:\lab6\check3
+LICENSE=WebPack
+USER_INFO=210759235_0_0_932

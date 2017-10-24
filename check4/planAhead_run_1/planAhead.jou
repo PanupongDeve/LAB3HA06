@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4
+# Build 157570 by hdbuild on Fri Dec 16 12:55:36 MST 2011
+# Start of session at: Tue Oct 24 10:43:58 2017
+# Process ID: 896
+# Log file: D:/lab6/check4/planAhead_run_1/planAhead.log
+# Journal file: D:/lab6/check4/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/lab6/check4/pa.fromNetlist.tcl
+startgroup
+set_property loc PAD25 [get_ports clk]
+endgroup
+startgroup
+set_property loc PAD164 [get_ports en]
+endgroup
+startgroup
+set_property loc PAD126 [get_ports sp]
+endgroup
+set_property loc "" [get_ports [list  {o[6]}]]
+startgroup
+set_property loc PAD188 [get_ports {com[0]}]
+endgroup
+startgroup
+set_property loc PAD187 [get_ports {com[1]}]
+endgroup
+startgroup
+set_property loc PAD189 [get_ports {o[0]}]
+endgroup
+startgroup
+set_property loc PAD195 [get_ports {o[1]}]
+endgroup
+startgroup
+set_property loc PAD196 [get_ports {o[2]}]
+endgroup
+startgroup
+set_property IOSTANDARD {} [get_ports [list {o[2]}]]
+endgroup
+startgroup
+set_property loc PAD2 [get_ports {o[3]}]
+endgroup
+startgroup
+set_property loc PAD3 [get_ports {o[4]}]
+endgroup
+startgroup
+set_property loc PAD12 [get_ports {o[5]}]
+endgroup
+startgroup
+set_property loc PAD13 [get_ports {o[6]}]
+endgroup
+save_design
+exit
+stop_gui

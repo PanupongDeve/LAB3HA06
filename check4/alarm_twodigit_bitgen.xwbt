@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\lab6\check4\alarm_twodigit.ncd
+OUTFILE=D:\lab6\check4\alarm_twodigit.bit
+FAMILY=Spartan3
+PART=xc3s200-4tq144
+WORKINGDIR=D:\lab6\check4
+LICENSE=WebPack
+USER_INFO=210759235_0_0_932

@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "D:/lab6/buzzer/buzzer.xst" -ofn "D:/lab6/buzzer/buzzer.syr" 
+xst -intstyle ise -ifn "D:/lab6/buzzer/buzzer.xst" -ofn "D:/lab6/buzzer/buzzer.syr" 
+xst -intstyle ise -ifn "D:/lab6/buzzer/buzzer.xst" -ofn "D:/lab6/buzzer/buzzer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-tq144-4 buzzer.ngc buzzer.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o buzzer_map.ncd buzzer.ngd buzzer.pcf 
+par -w -intstyle ise -ol high -t 1 buzzer_map.ncd buzzer.ncd buzzer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml buzzer.twx buzzer.ncd -o buzzer.twr buzzer.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc buzzer.ucf -p xc3s200-tq144-4 buzzer.ngc buzzer.ngd  
+map -intstyle ise -p xc3s200-tq144-4 -cm area -ir off -pr off -c 100 -o buzzer_map.ncd buzzer.ngd buzzer.pcf 
+par -w -intstyle ise -ol high -t 1 buzzer_map.ncd buzzer.ncd buzzer.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml buzzer.twx buzzer.ncd -o buzzer.twr buzzer.pcf -ucf buzzer.ucf 
+bitgen -intstyle ise -f buzzer.ut buzzer.ncd 
